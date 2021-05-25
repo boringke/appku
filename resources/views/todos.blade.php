@@ -30,14 +30,13 @@
         @forelse ($todos as $todo)
             <tr class="hover:bg-gray-100 focus-within:bg-gray-100">
                 <td class="border-t flex justify-between">
-                    <div>
-                        <a wire:click="editTodo({{ $todo->id }})" class="cursor-pointer px-6 py-4 flex items-center focus:text-indigo-500 {{ $todo->selesai ? 'line-through':'' }}">
-                            <input 
-                                wire:click="setSelesai({{ $todo->id }})" 
-                                type="checkbox" 
-                                class="mr-5" {{ $todo->selesai ? 'checked':'' }}
-                            />
-                            
+                    <div class="cursor-pointer px-6 py-4 flex items-center focus:text-indigo-500 {{ $todo->selesai ? 'line-through':'' }}">
+                        <input 
+                            wire:change="setSelesai({{ $todo->id }})" 
+                            type="checkbox" 
+                            class="mr-5" {{ $todo->selesai ? 'checked':'' }}
+                        />
+                        <a wire:click="editTodo({{ $todo->id }})">    
                             {{ $todo->tajuk }}
                         </a>
                     </div>                
