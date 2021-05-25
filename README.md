@@ -18,7 +18,7 @@ Cara dan langkah demi langkah untuk mencuba aplikasi AppKu. Sila rujuk langkah s
 Clone repo ke localhost:
 
 ```sh
-git clone https://github.com/BoringKe/appku.git appku
+git clone https://github.com/boringke/appku.git appku
 cd appku
 ```
 
