@@ -16,7 +16,7 @@ class DatabaseSeeder extends Seeder
     {
         \App\Models\User::create([
             'name' => 'Zulkifli Mohamed',
-            'email' => 'admin@appku.com',
+            'email' => 'admin@appku.io',
             'email_verified_at' => now(),
             'password' => bcrypt('password'),
             'remember_token' => Str::random(10)

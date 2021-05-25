@@ -7,9 +7,9 @@
             </a>
         </div>
         <div>
-            <a href="{{ route('contacts') }}" class="flex items-center group py-3">
-                <x-icon name="users" class="w-4 h-4 mr-2 {{ (Route::currentRouteName() == 'contacts') ? 'fill-white' : 'fill-indigo-400 group-hover:fill-white' }}" />
-                <div class="{{ (Route::currentRouteName() == 'contacts') ? 'text-white' : 'text-indigo-300 group-hover:text-white' }}">Contacts</div>
+            <a href="{{ route('todo') }}" class="flex items-center group py-3">
+                <x-icon name="book" class="w-4 h-4 mr-2 {{ (Route::currentRouteName() == 'todo') ? 'fill-white' : 'fill-indigo-400 group-hover:fill-white' }}" />
+                <div class="{{ (Route::currentRouteName() == 'todo') ? 'text-white' : 'text-indigo-300 group-hover:text-white' }}">Todo List</div>
             </a>
         </div>
         <div>

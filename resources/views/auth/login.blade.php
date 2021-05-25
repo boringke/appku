@@ -5,14 +5,14 @@
                 <div class="px-10 py-12">
                     <a href="/"><x-logo class="block mx-auto w-full max-w-xs fill-white" height="80" /></a>
 					<h1 class="text-center font-bold text-3xl mt-6">{{config('app.name')}}</h1>
-                    <h6 class="text-center text-cool-blue-500 mt-3 leading-normal">AppKu oleh Zulkifli Mohamed.<br>Aplikasi Single Page Application (SPA) untuk komer !</h6>
+                    <h6 class="text-center text-cool-blue-500 mt-3 leading-normal">AppKu oleh Zulkifli Mohamed.<br>Aplikasi Single Page Application (SPA) !</h6>
                     <div class="mx-auto mt-6 w-24 border-b-2"></div>
 
                     @error('login.failed')
-                        <div class="form-error mt-5">{{ $message }}</div>
+                        <div class="h5 form-error mt-5 font-semibold">{{ $message }}</div>
                     @enderror
                     
-                    <x-text-input wire:model.debounce.500ms="form.email" :error="$errors->first('form.email')" id="email" label="E-mel" type="email" group-class="mt-10" autofocus autocapitalize="off" />
+                    <x-text-input wire:model.debounce.500ms="form.email" :error="$errors->first('form.email')" id="email" label="E-mel" type="email" group-class="mt-5" autofocus autocapitalize="off" />
                     <x-text-input wire:model.debounce.500ms="form.password" :error="$errors->first('form.password')" id="password" group-class="mt-6" label="Password" type="password" />
                     <label class="mt-6 select-none flex items-center space-x-2" for="remember">
                         <input wire:model="form.remember" id="remember" class="mr-1" type="checkbox" />
@@ -21,6 +21,7 @@
                 </div>
                 <div class="px-10 py-4 bg-gray-100 border-t border-gray-100 flex justify-between items-center">
                     <a  href="{{ route('password.request') }}" class="hover:underline" tabindex="-1">Lupa Password ?</a>
+                    <div></div>
                     <x-button-loading loading-target="login" class="btn-indigo" type="submit">
                         Log Masuk
                     </x-button-loading>

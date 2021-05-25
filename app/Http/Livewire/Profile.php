@@ -17,6 +17,11 @@ class Profile extends Component
         'form.email' => 'required|email',
     ];
 
+    protected $validationAttributes = [
+        'form.name' => 'name',
+        'form.name' => 'e-mail address',
+    ];
+
     public function mount()
     {
         $this->form['name'] = auth()->user()->name;
@@ -27,9 +32,19 @@ class Profile extends Component
     {
         $profilData = $this->validate();
 
-        auth()->user()->update($profilData['form']);
+        //auth()->user()->update($profilData['form']);
 
-        $this->emit('notify-success', 'Profil telah berjaya dikemaskini !');
+        $this->emit('notify-success', 'Profil anda telah berjaya dikemaskini (contoh alert) !');
+    }
+
+    public function simpanProfilDelay()
+    {
+        sleep(3);
+        $profilData = $this->validate();
+
+        //auth()->user()->update($profilData['form']);
+
+        $this->emit('notify-success', 'Profil anda telah berjaya dikemaskini (contoh alert) !');
     }
 
     public function render()

@@ -2,12 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Livewire\Profile;
-use App\Http\Livewire\Contacts;
 use App\Http\Livewire\Dashboard;
+use App\Http\Livewire\Profile;
+use App\Http\Livewire\Todos;
 
-use App\Http\Livewire\Auth\ResetPassword;
-use App\Http\Livewire\Auth\Register;
+// use App\Http\Livewire\Auth\ResetPassword;
+// use App\Http\Livewire\Auth\Register;
 use App\Http\Livewire\Auth\Login;
 use App\Http\Livewire\Auth\ForgotPassword;
 
@@ -25,9 +25,8 @@ Route::middleware(['auth'])->group(function() {
     // Profile
     Route::get('/profile', Profile::class)->name('profile');
 
-    // Contacts (Contoh Data-Table)
-    Route::get('/contacts', Contacts::class)->name('contacts');
-
+    // Todo List
+    Route::get('/todo', Todos::class)->name('todo');
 
     // Contoh Error 500
     Route::get('/500', function () {
@@ -48,8 +47,8 @@ Route::middleware('guest')->group(function() {
     Route::get('/forgot-password', ForgotPassword::class)->name('password.request');
 
     // Reset Password
-    Route::get('/reset-password/{token}', ResetPassword::class)->name('password.reset');
+    // Route::get('/reset-password/{token}', ResetPassword::class)->name('password.reset');
 
     // Register
-    Route::get('/register', Register::class)->name('register');
+    // Route::get('/register', Register::class)->name('register');
 });

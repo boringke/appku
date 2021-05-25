@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
 class Login extends Component
 {
     public $form = [
-        'email' => 'admin@appku.com',
+        'email' => 'admin@appku.io',
         'password' => 'password',
         'remember' => false,
     ];
@@ -37,7 +37,7 @@ class Login extends Component
             return redirect()->route('dashboard');
         }
 
-        $this->addError('login.failed', 'Login Failed ! Please enter your valid account.');
+        $this->addError('login.failed', 'Sila masukkan maklumat akaun anda dengan betul !');
     }
     
     public function render()

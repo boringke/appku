@@ -7,9 +7,9 @@ use Livewire\Component;
 class Dashboard extends Component
 {
 
-    public function testMethod($name)
+    public function testMethod($data)
     {
-        dd("Ini adalah method testMethod() : data = '" . $name."'");
+        dd("Method/Function : testMethod() : data = `" . $data . "`");
     }
 
     public function render()

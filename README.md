@@ -1,4 +1,4 @@
-## AppKu oleh Zulkifli Mohamed
+## AppKu - Single Page Application (SPA) oleh Zulkifli Mohamed
 
 - Framework Laravel v8.x
 - Livewire
@@ -6,41 +6,61 @@
 - AlpineJS
 - PHP 7.4.x ke atas
 
-Single Page Application (SPA)
-
-### Demo Web App
+### Demo Unit
 
 - https://appku.zulmd.com
 
 
-### Clone Repo
+## Installation
 
-`git clone https://github.com/BoringKe/appku.git`
+Cara dan langkah demi langkah untuk mencuba aplikasi AppKu. Sila rujuk langkah seperti dibawah.
 
+Clone repo ke localhost:
 
-### Install Composer
+```sh
+git clone https://github.com/BoringKe/appku.git appku
+cd appku
+```
 
-`composer install`
+Install Composer:
 
-### Install NPM Package
+```sh
+composer install
+```
 
-`npm install && npm run dev`
+Install NPM Package:
 
-### Salin `.env.example` kepada `.env`
+```sh
+npm install && npm run dev
+```
 
-`cp .env.example .env`
+Setup Configuration:
 
-### Generate laravel key baru
+```sh
+cp .env.example .env
+```
 
-`php artisan key:generate`
+Generate laravel key baru
 
-### Migrate database
+```sh
+php artisan key:generate
+```
 
-`php artisan migrate --seed`
+Migrate database:
 
-### E-mel & Password
+```sh
+php artisan migrate --seed
+```
 
-- E-mail : admin@appku.com
+Run laravel:
+
+```sh
+php artisan serve
+```
+
+Login akaun E-mel & Password:
+
+- E-mail : admin@appku.io
 - Password : password
 
-Selamat mencuba !
+Selamat mencuba ! Bye !!!!

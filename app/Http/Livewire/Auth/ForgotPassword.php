@@ -21,17 +21,11 @@ class ForgotPassword extends Component
     {
         $this->validate();
 
-        // $status = Password::sendResetLink(['email' => $this->email]);
+        // reset password, send email ke pengguna
+        // ...
 
-        // if ($status == Password::RESET_LINK_SENT)
-        // {
-        //     session()->flash('status', __($status));
-        //     $this->email = '';
-        // }
-        // else
-        // {
-        //     $this->addError('request.failed', __($status));
-        // }
+        // Notify pengguna
+        session()->flash('status', "Password request telah diemelkan kepada anda !");
     }
 
     public function render()
