@@ -8,8 +8,8 @@ use Illuminate\Support\Facades\Auth;
 class Login extends Component
 {
     public $form = [
-        'email' => 'admin@appku.io',
-        'password' => 'password',
+        'email' => '',
+        'password' => '',
         'remember' => false,
     ];
 
@@ -27,7 +27,7 @@ class Login extends Component
     {
         $this->validateOnly($field);
     }
-    
+
     public function login()
     {
         $this->validate();
@@ -39,7 +39,7 @@ class Login extends Component
 
         $this->addError('login.failed', 'Sila masukkan maklumat akaun anda dengan betul !');
     }
-    
+
     public function render()
     {
         return view('auth.login')->layout('layouts.guest');
